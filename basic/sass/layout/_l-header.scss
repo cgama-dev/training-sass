@@ -1,0 +1,15 @@
+$layout-name: 'l-header';
+
+.#{$layout-name} {
+  background-color: var(--color-fm6-primary);
+  grid-area: header;
+  height: rem(74);
+  grid-template-columns: $global-max-width;
+  justify-content: center;
+
+  @include breakpoint(large-up) {
+    display: grid;
+  }
+
+
+}

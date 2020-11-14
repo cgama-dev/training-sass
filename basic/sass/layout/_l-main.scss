@@ -1,0 +1,19 @@
+$layout-name: 'l-main';
+
+.#{$layout-name} {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    "aside"
+    "content";
+
+  @include breakpoint(large-up) {
+    display: grid;
+    grid-gap: $global-module-size;
+    grid-template-areas:
+      "aside content"
+      ". content";
+    grid-template-columns: rem(250) 1fr;
+    grid-template-rows: minmax(0, auto) 1fr;
+  }
+}
